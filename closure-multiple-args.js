@@ -11,10 +11,10 @@ function add() {
       return arg1 + arg2;
     }
   } else {
-    var arg1 = arguments[0];
+    var arg1 = arguments[0]; //save first argument for use in closure
     
     if (checkIsNaN(arg1)) {
-      return function(arg2) {
+      return function(arg2) { //closure takes second single-argument as arg2 
         if (arg1 === undefined || checkIsNaN(arg2) === undefined) {
           console.log("undefined");
           return undefined;
